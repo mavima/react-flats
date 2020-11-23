@@ -1,3 +1,5 @@
+@import "cards";
+
 body {
   font-family: Helvetica;
 }
@@ -7,4 +9,51 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body {
+  background-color: white;
+}
+
+#root {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#root > div {
+  margin-top: 20px;
+  display: flex;
+}
+
+.map-container {
+  height: 100vh;
+  width: 40%;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+}
+
+.mapboxgl-map {
+  max-height: 90vh;
+  width: 100%;
+}
+
+.flat-list {
+  display: grid;
+  padding-left: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: min-content;
+  max-height: 95vh;
+  .card {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.marker {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  border-radius: 50%;
 }
